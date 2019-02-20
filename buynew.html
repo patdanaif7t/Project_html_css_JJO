@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>จัดการซื้อรถเข้า</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header-left">
+            <img src="https://www.img.in.th/images/370498950fc27d4dc94ad44eab03bc66.png" alt="logo">
+        </div>
+        <div id="header-right">
+            ชื่อพนักงาน : นายภัทรดนัย ช่างเหลา <a href="login.html">ออกจากระบบ</a>
+        </div>
+    </header>
+    <nav>
+        <ul id="navbar">
+            <li class="navbar-item "><a href="index.html">หน้าแรก</a></li>
+            <div class="dropdown navbar-item active">
+                <button class="dropbtn">จัดการสต็อกรถ
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="stock.html">สต็อครถ</a>
+                    <a href="buynew.html">ซื้อรถเข้า</a>
+                    <a href="ManageSellCar.html">ขายรถ</a>
+                </div>
+            </div>
+            <li class="navbar-item"><a href="manageRepair.html">จัดการซ่อม</a></li>
+            <li class="navbar-item"><a href="regis.html">จัดการเดินทะเบียน</a></li>
+            <li class="navbar-item"><a href="infoCustomer.html">ดูข้อมูลลูกค้า</a></li>
+            <li class="navbar-item"><a href="sellreport.html">ดูรายงาน</a></li>
+            <li class="navbar-item"><a href="manageEmp.html">จัดการพนักงาน</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- The Modal พื้นหลัง -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content เนื้อหา -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="content-1">
+                <p class="label">รหัสรถ</p>
+                <input type="text" class="modal-input " />
+                <p class="label">ทะเบียน</p>
+                <input type="text" class="modal-input " />
+                <p class="label">รุ่น</p>
+                <input type="text" class="modal-input " />
+                <p class="label">สี</p>
+                <input type="text" class="modal-input " />
+                <p class="label">ราคาต้นทุน</p>
+                <input type="text" class="modal-input " />
+                <p class="label">ราคาซ่อม</p>
+                <input type="text" class="modal-input " />
+                <p class="label">วันที่ซื้อ</p>
+                <input type="date" class="modal-input name=" bday">
+                <div>
+                    <button class="btn btn-cancelbynew " id="cancel">ยกเลิก</button>
+                    <button class="btn btn-cancel " id="nextBtn">ต่อไป</button>
+
+                </div>
+            </div>
+
+            <div id="content-2">
+                <p class="label">ผู้ขาย</p>
+                <input type="text" class="modal-input " />
+                <p class="label">หมายเลขโทรศัพท์</p>
+                <input type="text" class="modal-input " />
+                <p class="label">ที่อยู่</p>
+                <textarea class="modal-input " name="message" rows="5" cols="53"></textarea>
+                <p class="label">นายหน้า</p>
+                <input type="text" class="modal-input " />
+                <p class="label">พนักงานซื้อ</p>
+                <input type="text" class="modal-input " />
+
+                <div class="group-button">
+                    <button class="btn btn-submit1 " id="submit">ยืนยัน</button>
+                    <button class="btn btn-submit1 " id="backBtn">ย้อนกลับ</button>
+                    <button class="btn btn-submit1 " id="cancel">ยกเลิก</button>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+    <section id="container">
+
+        <div class="row">
+            <div class="form-group">
+                <div class="form-input-icon">
+                    <input type="text" placeholder="ค้นหารหัสรถ" />
+                    <i class="search-icon"></i>
+                </div>
+                <div class="form-button">
+                    <button class="btn btn-add" id="myBtn">ซื้อรถเข้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row scrollit">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">รหัสรถ</th>
+                        <th scope="col">ทะเบียนรถ</th>
+                        <th scope="col">รุ่น</th>
+                        <th scope="col">ราคาขาย</th>
+                        <th scope="col">วันที่ซื้อ</th>
+                        <th scope="col">แก้ไข/ลบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>บน 785469</td>
+                        <td>MOTO</td>
+                        <td>1,000,000</td>
+                        <td>01/02/2005</td>
+                        <td>⠀⠀⠀<a href="">แก้ไข</a>⠀⠀⠀⠀<a href="">ลบ</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>บท 356889</td>
+                        <td>POTO</td>
+                        <td>1,000,000</td>
+                        <td>01/02/2005</td>
+                        <td>⠀⠀⠀<a href="">แก้ไข</a>⠀⠀⠀⠀<a href="">ลบ</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>นย 79852</td>
+                        <td>OLOL</td>
+                        <td>1,000,000</td>
+                        <td>01/02/2005</td>
+                        <td>⠀⠀⠀<a href="">แก้ไข</a>⠀⠀⠀⠀<a href="">ลบ</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>บท 456459</td>
+                        <td>POTO</td>
+                        <td>1,000,000</td>
+                        <td>01/02/2005</td>
+                        <td>⠀⠀⠀<a href="">แก้ไข</a>⠀⠀⠀⠀<a href="">ลบ</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>บล 66889</td>
+                        <td>POTO</td>
+                        <td>1,000,000</td>
+                        <td>01/02/2005</td>
+                        <td>⠀⠀⠀<a href="">แก้ไข</a>⠀⠀⠀⠀<a href="">ลบ</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>บง 126889</td>
+                        <td>POTO</td>
+                        <td>1,000,000</td>
+                        <td>01/02/2005</td>
+                        <td>⠀⠀⠀<a href="">แก้ไข</a>⠀⠀⠀⠀<a href="">ลบ</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>บบ 888888</td>
+                        <td>POTO</td>
+                        <td>1,000,000</td>
+                        <td>01/02/2005</td>
+                        <td>⠀⠀⠀<a href="">แก้ไข</a>⠀⠀⠀⠀<a href="">ลบ</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>ลบ 666889</td>
+                        <td>POTO</td>
+                        <td>1,000,000</td>
+                        <td>01/02/2005</td>
+                        <td>⠀⠀⠀<a href="">แก้ไข</a>⠀⠀⠀⠀<a href="">ลบ</a></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+            window.onclick = function (event) {
+             if (event.target == modal) {
+                 modal.style.display = "none";
+             }
+         }
+     </script>
+</body>
+
+</html>

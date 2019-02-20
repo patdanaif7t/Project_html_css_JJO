@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>จัดการขายรถ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header-left">
+            <img src="https://www.img.in.th/images/370498950fc27d4dc94ad44eab03bc66.png" alt="logo">
+        </div>
+        <div id="header-right">
+            ชื่อพนักงาน : นายธราพงษ์ คงกระพันธ์ <a href="login.html">ออกจากระบบ</a>
+        </div>
+    </header>
+    <nav>
+        <ul id="navbar">
+            <li class="navbar-item "><a href="index.html">หน้าแรก</a></li>
+            <div class="dropdown navbar-item active">
+                <button class="dropbtn ac active">จัดการสต็อกรถ
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="stock.html">สต็อครถ</a>
+                    <a href="buynew.html">ซื้อรถเข้า</a>
+                    <a href="ManageSellCar.html">ขายรถ</a>
+                </div>
+            </div>
+            <li class="navbar-item"><a href="manageRepair.html">จัดการซ่อม</a></li>
+            <li class="navbar-item"><a href="regis.html">จัดการเดินทะเบียน</a></li>
+            <li class="navbar-item"><a href="infoCustomer.html">ดูข้อมูลลูกค้า</a></li>
+            <li class="navbar-item"><a href="sellreport.html">ดูรายงาน</a></li>
+            <li class="navbar-item"><a href="manageEmp.html">จัดการพนักงาน</a></li>
+        </ul>
+    </nav>
+
+    <!-- The Modal พื้นหลัง -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content เนื้อหา -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <p class="label">รหัสการขาย</p>
+            <input type="text" class="modal-input " />
+            <p class="label">รหัสรถ</p>
+            <input type="text" class="modal-input " />
+            <p class="label">หมายเลขประจำตัวผู้เสียภาษี</p>
+            <input type="text" class="modal-input " />
+            <p class="label">ชื่อ-สกุลลูกค้า</p>
+            <input type="text" class="modal-input " />
+            <p class="label">หมายเลขโทรศัพท์</p>
+            <input type="text" class="modal-input " />
+            <p class="label">ที่อยู่</p>
+            <textarea class="modal-input " name="message" rows="5" cols="57"></textarea>
+            <p class="label">เซลล์ขาย</p>
+            <input type="text" class="modal-input " />
+            <p class="label">วันที่ขาย</p>
+            <input type="date" class="modal-input name=" bday">
+            <p class="label">พนักงานที่ขาย</p>
+            <input type="text" class="modal-input " />
+
+            <div>
+                <button class="btn btn-submit " id="submit">ยืนยัน</button>
+                <button class="btn btn-cancel " id="cancel">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="container">
+        <div class="row">
+            <div class="form-group">
+                <div class="form-input-icon">
+                    <input type="text" placeholder="ค้นหารหัสการขาย" />
+                    <i class="search-icon"></i>
+                </div>
+                <div class="form-button">
+                    <button class="btn btn-add" id="myBtn">ขายรถ</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row scrollit">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">รหัสการขาย</th>
+                        <th scope="col">ชื่อ-สกุลลูกค้า</th>
+                        <th scope="col">ราคาขาย</th>
+                        <th scope="col">วันที่ขาย</th>
+                        <th scope="col">แก้ไข/ลบ</th>
+                        <th scope="col">ออกเอกสาร</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">sell1</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell2</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell3</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell4</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell5</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell6</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell7</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell8</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell9</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell10</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell11</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">sell12</td>
+                        <td>ภัทรดนัย ช่างเหลา</td>
+                        <td>90,000</td>
+                        <td>01/02/2019</td>
+                        <td><a href="">แก้ไข</a><a href="">ลบ</a></td>
+                        <td><a href="">ออกเอกสาร</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

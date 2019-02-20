@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>จัดการสต็อกรถ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header-left">
+            <img src="https://www.img.in.th/images/370498950fc27d4dc94ad44eab03bc66.png" alt="logo">
+        </div>
+        <div id="header-right">
+            ชื่อพนักงาน : นางสาว ณัฏฐธิดา ศรีษา <a href="login.html">ออกจากระบบ</a>
+        </div>
+    </header>
+    <nav>
+        <ul id="navbar">
+            <li class="navbar-item " ><a href="index.html">หน้าแรก</a></li>
+            <div class="dropdown navbar-item active">
+                <button class="dropbtn active">จัดการสต็อกรถ
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="stock.html">สต็อครถ</a>
+                    <a href="buynew.html">ซื้อรถเข้า</a>
+                    <a href="ManageSellCar.html">ขายรถ</a>
+                </div>
+            </div>
+            <li class="navbar-item"><a href="manageRepair.html">จัดการซ่อม</a></li>
+            <li class="navbar-item"><a href="regis.html">จัดการเดินทะเบียน</a></li>
+            <li class="navbar-item"><a href="infoCustomer.html">ดูข้อมูลลูกค้า</a></li>
+            <li class="navbar-item"><a href="sellreport.html">ดูรายงาน</a></li>
+            <li class="navbar-item"><a href="manageEmp.html">จัดการพนักงาน</a></li>
+        </ul> 
+    </nav>
+
+    <!-- The Modal พื้นหลัง -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content เนื้อหา -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <p class="label">รหัสการขาย</p>
+            <input type="text" class="modal-input " />
+            <p class="label">รหัสรถ</p>
+            <input type="text" class="modal-input " />
+            <p class="label">เลขประจำตัวผู้เสียภาษี</p>
+            <input type="text" class="modal-input " />
+            <p class="label">ชื่อ-สกุลลูกค้า</p>
+            <input type="text" class="modal-input " />
+            <p class="label">หมายเลขโทรศัพท์</p>
+            <input type="text" class="modal-input " />
+            <p class="label">ที่อยู่</p>
+            <input type="text" class="modal-input1 " />
+            <p class="label">เซลล์ขาย</p>
+            <input type="text" class="modal-input " />
+            <p class="label">วันที่ขาย</p>
+            <input type="date" class="modal-input" name="bday" />
+            <p class="label">พนักงานขาย</p>
+            <input type="text" class="modal-input " />
+
+            <div>
+                <button class="btn btn-submit " id="submit">ยืนยัน</button>
+                <button class="btn btn-cancel  " id="cancel">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="container">
+
+        <div class="row">
+            <div class="form-group">
+                <div class="form-input-icon1">
+                    <input type="text" placeholder="ค้นหารหัสรถ" />
+                    <i class="search-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="row scrollit">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>รหัสรถ</th>
+                        <th>ทะเบียน</th>
+                        <th>รุ่น</th>
+                        <th>สี</th>
+                        <th>ราคาขาย</th>
+                        <th>ขาย</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>สน-xxxx</td>
+                        <td>vios</td>
+                        <td>เทา</td>
+                        <td>800,000.00</td>
+                        <td><a href="#" class="myBtn">ขาย</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        
+        var btn = document.getElementsByClassName("myBtn");
+        for (var i=0;i<btn.length;i++){
+            btn[i].onclick = function () {
+                modal.style.display = "block";
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

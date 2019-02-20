@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ดูข้อมูลลูกค้า</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header-left">
+            <img src="https://www.img.in.th/images/370498950fc27d4dc94ad44eab03bc66.png" alt="logo">
+        </div>
+        <div id="header-right">
+            ชื่อพนักงาน : นายภัทรดนัย ช่างเหลา <a href="login.html">ออกจากระบบ</a>
+        </div>
+    </header>
+    <nav>
+        <ul id="navbar">
+            <li class="navbar-item "><a href="index.html">หน้าแรก</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">จัดการสต็อกรถ
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="stock.html">สต็อครถ</a>
+                    <a href="buynew.html">ซื้อรถเข้า</a>
+                    <a href="ManageSellCar.html">ขายรถ</a>
+                </div>
+            </div>
+            <li class="navbar-item"><a href="manageRepair.html">จัดการซ่อม</a></li>
+            <li class="navbar-item"><a href="regis.html">จัดการเดินทะเบียน</a></li>
+            <li class="navbar-item active"><a href="infoCustomer.html">ดูข้อมูลลูกค้า</a></li>
+            <li class="navbar-item"><a href="sellreport.html">ดูรายงาน</a></li>
+            <li class="navbar-item"><a href="manageEmp.html">จัดการพนักงาน</a></li>
+        </ul>
+    </nav>
+
+    <!-- The Modal พื้นหลัง -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content เนื้อหา -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <p class="label">รหัสพนักงาน</p>
+            <input type="text" class="modal-input " />
+            <p class="label">ชื่อพนักงาน</p>
+            <input type="text" class="modal-input " />
+            <p class="label">เลขประจำตัวประชาชน</p>
+            <input type="text" class="modal-input " />
+            <p class="label">สถานะ</p>
+            <input type="text" class="modal-input " />
+            <p class="label">ชื่อผู้ใช้งาน</p>
+            <input type="text" class="modal-input " />
+            <p class="label">รหัสผ่าน</p>
+            <input type="text" class="modal-input " />
+
+            <div>
+                <button class="btn btn-submit " id="submit">ยืนยัน</button>
+                <button class="btn btn-cancel  " id="cancel">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="container">
+
+        <div class="row">
+            <div class="form-group">
+                <div class="form-input-icon1">
+                    <input type="text" placeholder="ค้นหารหัสลูกค้า" />
+                    <i class="search-icon"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row scrollit">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col" id="th1">วันที่</th>
+                        <th scope="col" id="th2">รายการ</th>
+                        <th scope="col" id="th3">ชื่อ-สกุลลูกค้า</th>
+                        <th scope="col" id="th4">ที่อยู่</th>
+                        <th scope="col" id="th5">หมายเลขโทรศัพท์</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">17/10/2560</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>111/11</td>
+                        <td>0888888888</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">07/12/2560</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>222/22</td>
+                        <td>0999999999</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">31/10/2558</td>
+                        <td>Larry</td>
+                        <td>Ear</td>
+                        <td>222/22</td>
+                        <td>0822222222</td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">28/02/2552</td>
+                        <td>Marry</td>
+                        <td>Cop</td>
+                        <td>333/33</td>
+                        <td>0987654321</td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">05/05/2555</td>
+                        <td>Bobby</td>
+                        <td>Tree</td>
+                        <td>444/44</td>
+                        <td>0894567891</td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">11/01/2561</td>
+                        <td>Pear</td>
+                        <td>Jib</td>
+                        <td>555/55</td>
+                        <td>0800000000</td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">06/06/2560</td>
+                        <td>Mark</td>
+                        <td>Pair</td>
+                        <td>666/66</td>
+                        <td>0877777777</td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">02/08/2559</td>
+                        <td>Jacob</td>
+                        <td>Pear</td>
+                        <td>777/77</td>
+                        <td>0855555555</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">16/08/2557</td>
+                        <td>Larry</td>
+                        <td>Bird</td>
+                        <td>888/88</td>
+                        <td>0822222222</td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">24/04/2554</td>
+                        <td>Larry</td>
+                        <td>Bear</td>
+                        <td>999/99</td>
+                        <td>0811111111</td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">11/11/2560</td>
+                        <td>Larry</td>
+                        <td>Guide</td>
+                        <td>101/11</td>
+                        <td>0834562587</td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">20/06/2540</td>
+                        <td>Larry</td>
+                        <td>First</td>
+                        <td>102/22</td>
+                        <td>0841385946</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

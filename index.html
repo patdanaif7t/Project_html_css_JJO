@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ยินดีต้อนรับเข้าสู่ระบบจัดการร้าน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header-left">
+            <img src="https://www.img.in.th/images/370498950fc27d4dc94ad44eab03bc66.png" alt="logo">
+        </div>
+        <div id="header-right">
+            ชื่อพนักงาน : นายภัทรดนัย ช่างเหลา <a href="login.html">ออกจากระบบ</a>
+        </div>
+    </header>
+    <nav>
+        <ul id="navbar">
+            <li class="navbar-item active"><a href="index.html">หน้าแรก</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">จัดการสต็อกรถ
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="stock.html">สต็อครถ</a>
+                    <a href="buynew.html">ซื้อรถเข้า</a>
+                    <a href="ManageSellCar.html">ขายรถ</a>
+                </div>
+            </div>
+            <li class="navbar-item"><a href="manageRepair.html">จัดการซ่อม</a></li>
+            <li class="navbar-item"><a href="regis.html">จัดการเดินทะเบียน</a></li>
+            <li class="navbar-item"><a href="infoCustomer.html">ดูข้อมูลลูกค้า</a></li>
+            <li class="navbar-item"><a href="sellreport.html">ดูรายงาน</a></li>
+            <li class="navbar-item"><a href="manageEmp.html">จัดการพนักงาน</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- The Modal พื้นหลัง -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content เนื้อหา -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <p class="label">รหัสพนักงาน</p>
+            <input type="text" class="modal-input " />
+            <p class="label">ชื่อพนักงาน</p>
+            <input type="text" class="modal-input " />
+            <p class="label">เลขประจำตัวประชาชน</p>
+            <input type="text" class="modal-input " />
+            <p class="label">สถานะ</p>
+            <input type="text" class="modal-input " />
+            <p class="label">ชื่อผู้ใช้งาน</p>
+            <input type="text" class="modal-input " />
+            <p class="label">รหัสผ่าน</p>
+            <input type="text" class="modal-input " />
+
+            <div>
+                <button class="btn btn-submit " id="submit">ยืนยัน</button>
+                <button class="btn btn-cancel " id="cancel">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="container">
+        <div class="welcome">
+            <h1>ยินดีต้อนรับเข้าสู่ระบบจัดการร้าน</h1>
+            <h1>โชคทวีออโต้เซลล์</h1>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

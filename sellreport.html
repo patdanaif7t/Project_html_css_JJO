@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ดูรายงาน</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="jquery.min.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="header-left">
+      <img src="https://www.img.in.th/images/370498950fc27d4dc94ad44eab03bc66.png" alt="logo" />
+    </div>
+    <div id="header-right">
+      ชื่อพนักงาน : นายนนทพงษ์ จันทร์โฉมศรี <a href="login.html">ออกจากระบบ</a>
+    </div>
+  </header>
+  <nav>
+    <ul id="navbar">
+        <li class="navbar-item "><a href="index.html">หน้าแรก</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">จัดการสต็อกรถ
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="stock.html">สต็อครถ</a>
+                <a href="buynew.html">ซื้อรถเข้า</a>
+                <a href="ManageSellCar.html">ขายรถ</a>
+            </div>
+        </div>
+        <li class="navbar-item"><a href="manageRepair.html">จัดการซ่อม</a></li>
+        <li class="navbar-item"><a href="regis.html">จัดการเดินทะเบียน</a></li>
+        <li class="navbar-item"><a href="infoCustomer.html">ดูข้อมูลลูกค้า</a></li>
+        <li class="navbar-item active"><a href="sellreport.html">ดูรายงาน</a></li>
+        <li class="navbar-item"><a href="manageEmp.html">จัดการพนักงาน</a></li>
+    </ul>
+</nav>
+
+  <section id="container">
+    <div class="row row-right">
+      <button id="inputdate" class="btn btn-add">เลือกช่วง</button>
+      <button class="btn btn-add" onclick="imprimir('printTable')">ส่งออก</button>
+    </div>
+    <div class="row scrollit">
+      <table id="printTable" class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">วันที่</th>
+            <th scope="col">รหัสการสั่งซื้อ</th>
+            <th scope="col">ราคา</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>14/10/2019</td>
+            <td>SH112004456</td>
+            <td>59,155,200</td>
+          </tr>
+          <tr>
+            <td>22/9/2019</td>
+            <td>UR945786124</td>
+            <td>10,159,650</td>
+          </tr>
+          <tr>
+            <td>7/12/2019</td>
+            <td>KR124539687</td>
+            <td>59,155,200</td>
+          </tr>
+          <tr>
+            <td>24/1/2019</td>
+            <td>SC569784483</td>
+            <td>599,850</td>
+          </tr>
+          <tr>
+            <td>1/11/2019</td>
+            <td>SW112396578</td>
+            <td>1,023,877</td>
+          </tr>
+
+          <tr>
+            <td>14/10/2019</td>
+            <td>SH112004456</td>
+            <td>59,155,200</td>
+          </tr>
+          <tr>
+            <td>22/9/2019</td>
+            <td>UR945786124</td>
+            <td>10,159,650</td>
+          </tr>
+          <tr>
+            <td>7/12/2019</td>
+            <td>KR124539687</td>
+            <td>59,155,200</td>
+          </tr>
+          <tr>
+            <td>24/1/2019</td>
+            <td>SC569784483</td>
+            <td>599,850</td>
+          </tr>
+          <tr>
+            <td>1/11/2019</td>
+            <td>SW112396578</td>
+            <td>1,023,877</td>
+          </tr>
+          <tr>
+            <td>14/10/2019</td>
+            <td>SH112004456</td>
+            <td>59,155,200</td>
+          </tr>
+          <tr>
+            <td>22/9/2019</td>
+            <td>UR945786124</td>
+            <td>10,159,650</td>
+          </tr>
+          <tr>
+            <td>7/12/2019</td>
+            <td>KR124539687</td>
+            <td>59,155,200</td>
+          </tr>
+          <tr>
+            <td>24/1/2019</td>
+            <td>SC569784483</td>
+            <td>599,850</td>
+          </tr>
+          <tr>
+            <td>1/11/2019</td>
+            <td>SW112396578</td>
+            <td>1,023,877</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content เนื้อหา -->
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          
+          <p class="label">วันที่เริ่ม</p>
+          <input type="date" class="modal-input" name="bday">
+          <p class="label">จนถึง</p>
+          <input type="date" class="modal-input" name="bday">
+          
+
+          <div>
+              <button class="btn btn-submit " id="submit">ยืนยัน</button>
+              <button class="btn btn-cancel  " id="cancel">ยกเลิก</button>
+          </div>
+      </div>
+  </div>
+    
+  </section>
+  <footer></footer>
+  
+</body>
+
+</html>
+<script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("inputdate");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function () {
+      modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+      modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+</script>
